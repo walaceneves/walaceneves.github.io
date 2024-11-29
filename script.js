@@ -1,9 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-    console.log("Site de Astronomia carregado com sucesso!");
-});
-
-
-document.addEventListener("DOMContentLoaded", () => {
     const button = document.getElementById("modo-tema");
 
     // Função para alternar o tema
