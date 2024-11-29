@@ -6,13 +6,14 @@ document.addEventListener("DOMContentLoaded", () => {
 document.addEventListener("DOMContentLoaded", () => {
     const button = document.getElementById("modo-tema");
 
+    // Função para alternar o tema
     button.addEventListener("click", () => {
-        // Alterna a classe "claro" no body
+        // Alternar a classe "claro" em elementos principais
         document.body.classList.toggle("claro");
         document.querySelector("header").classList.toggle("claro");
         document.querySelector("footer").classList.toggle("claro");
 
-        // Atualiza o texto do botão
+        // Atualizar o texto do botão com base no tema atual
         if (document.body.classList.contains("claro")) {
             button.textContent = "Modo Escuro";
         } else {
