@@ -1,18 +1,12 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const button = document.getElementById("modo-tema");
+document.addEventListener("DOMContentLoaded", function() {
+    const button = document.getElementById("alterar-cor");
+    const texto = document.getElementById("texto");
 
-    // Função para alternar o tema
-    button.addEventListener("click", () => {
-        // Alternar a classe "claro" em elementos principais
-        document.body.classList.toggle("claro");
-        document.querySelector("header").classList.toggle("claro");
-        document.querySelector("footer").classList.toggle("claro");
-
-        // Atualizar o texto do botão com base no tema atual
-        if (document.body.classList.contains("claro")) {
-            button.textContent = "Modo Escuro";
-        } else {
-            button.textContent = "Modo Claro";
-        }
+    // Função para mudar a cor do texto
+    button.addEventListener("click", function() {
+        const cores = ["blue", "green", "yellow"];
+        const corAtual = texto.style.color;
+        let novaCor = cores[(cores.indexOf(corAtual) + 1) % cores.length];
+        texto.style.color = novaCor;
     });
 });
